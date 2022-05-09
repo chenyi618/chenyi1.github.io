@@ -30,7 +30,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 </p>
                 <p>
-                    <a href="http://purecss.io" class="pure-button pure-button-primary">Get Started</a>
+                    <a href="javascript:alert('嗨~')" class="pure-button pure-button-primary">Get Started</a>
                 </p>
             </div>
         </div>
@@ -49,6 +49,8 @@
                         <p>
                             Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
                         </p>
+                        <input type="number" id="input-number" placeholder="請輸入數字" />
+                        <button id="click-me-button">按我</button>
                     </div>
                     <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
                         <h3 class="content-subhead">
@@ -142,7 +144,14 @@
             <div class="footer l-box is-center">
                 View the source of this layout to learn more. Made with love by the Pure Team.
             </div>
-        
         </div>
+        <script>
+            const inputNumber = document.getElementById('input-number')
+            const clickMeButton = document.getElementById('click-me-button')
+            clickMeButton.addEventListener('click',() => {
+                const number = Number(inputNumber.value)
+                alert('你輸入了:' + number)
+            })
+        </script>
     </body>
 </html>
